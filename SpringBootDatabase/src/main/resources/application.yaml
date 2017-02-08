@@ -1,0 +1,12 @@
+
+spring:
+  h2:
+    console:
+      enabled: :true
+  datasource:
+    schema: classpath:import.sql
+    initialize: true
+#logging
+logging:
+  level:
+    root: debug

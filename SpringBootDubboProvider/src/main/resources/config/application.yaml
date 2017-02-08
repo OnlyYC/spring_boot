@@ -1,0 +1,14 @@
+
+
+#datasource
+spring:
+  profiles:
+    include: test
+
+
+#logging
+logging:
+  path: log
+  level:
+    root: error
+    mapper: TRACE

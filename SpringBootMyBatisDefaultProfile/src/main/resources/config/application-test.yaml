@@ -1,0 +1,10 @@
+
+
+
+
+
+logging:
+  path: log
+  level:
+    root: debug
+    mapper: TRACE

@@ -1,0 +1,7 @@
+
+
+
+#logging
+logging:
+  level:
+    root: debug

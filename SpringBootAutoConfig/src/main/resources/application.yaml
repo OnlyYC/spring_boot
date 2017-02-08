@@ -1,0 +1,15 @@
+
+
+
+name: hh
+
+my:
+  name: 涛逼
+  mul:
+   - hh
+   - jlkl
+   - tt
+security:
+  oauth2:
+    client:
+      token-name:

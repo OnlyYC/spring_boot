@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd        
+     http://code.alibabatech.com/schema/dubbo        
+     http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="my-service"/>
+
+    <dubbo:provider timeout="60000"/>
+
+
+    <!--&lt;!&ndash; 使用multicast广播注册中心暴露服务地址 &ndash;&gt;-->
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234"/>-->
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"  />
+
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20881" />
+
+    <dubbo:service interface="com.liaoyb.api.IHandle" ref="handle"/>
+
+    <bean id="handle" class="com.liaoyb.api.impl.Handle"/>
+
+</beans>

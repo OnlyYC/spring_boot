@@ -1,0 +1,9 @@
+
+
+
+
+
+logging:
+  path: log
+  level:
+    root: error
